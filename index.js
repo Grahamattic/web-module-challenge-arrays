@@ -169,20 +169,20 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(array, flavor) {
+    function filterByWord(array, flavor) {
 
-    var chocolateFlavors = [];
+        var chocolateFlavors = [];
 
-    for(i = 0; i < array.length; i++) {
-        if (array[i].includes(flavor)) {
-            chocolateFlavors.push(array[i]);
+        for(i = 0; i < array.length; i++) {
+            if (array[i].includes(flavor)) {
+                chocolateFlavors.push(array[i]);
+            }
         }
+
+        console.log(chocolateFlavors);
     }
 
-    console.log(chocolateFlavors);
-}
-
-filterByWord(originalFlavors, "Chocolate");
+    filterByWord(originalFlavors, "Chocolate");
 
 
 
@@ -312,14 +312,13 @@ var regionalFlavors = ["Pink Bubblegum",
         let mergedArray = []
         mergedArray.push(...array1, ...array2, ...array3, ...array4);
 
+        let randomFlavors = [];
         let randomFlavorsArray = [];
 
         // Randomly choose 31 flavors from the merged flavors array.
         for(i = 0; i < 31; i++) {
-             if (mergedArray[i] !== " ") {
-                let randomFlavors = mergedArray[Math.floor(Math.random() * mergedArray.length)];
-                randomFlavorsArray.push(randomFlavors[i]);
-            }
+            let randomFlavors = mergedArray[Math.floor(Math.random() * mergedArray.length)];
+            randomFlavorsArray.push(randomFlavors);
         }
         
         console.log(randomFlavorsArray);
