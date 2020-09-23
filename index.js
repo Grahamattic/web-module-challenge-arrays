@@ -309,16 +309,22 @@ var regionalFlavors = ["Pink Bubblegum",
     function getRandomFlavors(array1,array2,array3,array4) {
 
         // Merge the four arrays.
-        let mergedArray = []
+        let mergedArray = [];
         mergedArray.push(...array1, ...array2, ...array3, ...array4);
+        
+        // Remove duplicates from the merged array.
+        mergedArray = [...new Set(mergedArray)];
 
+        // Declare two new arrays.
         let randomFlavors = [];
         let randomFlavorsArray = [];
 
         // Randomly choose 31 flavors from the merged flavors array.
         for(i = 0; i < 31; i++) {
-            let randomFlavors = mergedArray[Math.floor(Math.random() * mergedArray.length)];
+            let index = Math.floor(Math.random() * mergedArray.length)
+            let randomFlavors = mergedArray[index];
             randomFlavorsArray.push(randomFlavors);
+            mergedArray.splice(index,1);
         }
         
         console.log(randomFlavorsArray);
