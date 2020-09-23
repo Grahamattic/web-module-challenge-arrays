@@ -143,14 +143,14 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-    let array2 = null;
+    let newArray = null;
 
     function copy(array1, array2) {
         array2 = array1.slice();
         console.log(array2);
     }
 
-    copy(originalFlavors, array2);
+    copy([1,2,3,4,5,6,7], newArray);
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting
 all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns
